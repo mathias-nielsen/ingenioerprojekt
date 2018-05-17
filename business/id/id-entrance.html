@@ -1,0 +1,21 @@
+<hr class="mapviewer_panel_hr"/>
+<div>
+  <label for="textarea1">Metode:</label>
+  <select
+    id="textarea1"
+    ng-model="idMethod"
+    ng-init=" idMethod = idMethods[0]"
+    ng-options="x for x in idMethods">
+  </select>
+</div>
+<div >
+  <label for="textarea2">Specifik ID:</label>
+  <textarea
+    ng-disabled="hideTextField()"
+    id="textarea2"
+    ng-model="specificId"
+    style="resize:none"
+    name="specificId"
+    rows="1">
+  </textarea>
+</div>

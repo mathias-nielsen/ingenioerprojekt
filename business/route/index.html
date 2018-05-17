@@ -1,0 +1,46 @@
+<!-- RoutePlanner -->
+  <hr class="mapviewer_panel_hr"/>
+  <div ng-init="initBusinessRoute()" class="nav nav-list">
+    <div class="title_new">S&oslash;g rute
+      <tool-tip></tool-tip>
+
+    </div>
+    <div id="business_route_menu_pc">
+      <!-- Fra container -->
+      <div class="route-input-from-container clearfix">
+        <div class="route-input-label-div">Fra:</div>
+        <div class="route-gps-div"><span id="gps-icon-from" class="glyphicon glyphicon-map-marker" ng-click="useCurrentLocation('from')"></span></div>
+        <div class="route-input-div">
+              <input id="business-address-from" ng-keyup="$event.keyCode == 13 ? enterClick('from') : null" class="route-inputfield controls" type="text" placeholder="Indtast adresse/stednavn"></input>
+          <span class="route-input-address-clear-icon" ng-click="removeAddress('from')"><img alt="Nulstil tekstfelt" src="./images/luk.png"></img></span>
+        </div>
+      </div>
+      <!-- ng-keyup="$event.keyCode == 13 ? enterClick() : null" -->
+
+      <!-- Til container -->
+      <div class="route-input-to-container clearfix">
+        <div class="route-input-label-div">Til:</div>
+        <div class="route-gps-div"><span id="gps-icon-to" class="glyphicon glyphicon-map-marker" ng-click="useCurrentLocation('to')"></span>
+        </div>
+        <div class="route-input-div">
+          <input id="business-address-to" class="route-inputfield controls" type="text" placeholder="Indtast adresse/stednavn"></input>
+          <span class="route-input-address-clear-icon" ng-click="removeAddress('to')"><img alt="Nulstil tekstfelt" src="./images/luk.png"></img></span>
+        </div>
+      </div>
+      <div class="clearfix">
+
+      </div>
+
+      <div class="clearfix">
+        <a class="route-test-link" ng-click="validateFunction()">Valider rute</a>
+        <a class="route-remove-link" ng-click="removeAddress()">Fjern rute</a>
+      </div>
+
+      <div>
+        <hr class="mapviewer_panel_hr"/>
+        <button type="button" class="btn-default" ng-click="testInspectBridge()">{{buttonText}}</button>
+      </div>
+
+      <clearance-id></clearance-id>
+    </div>
+  </div>
